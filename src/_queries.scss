@@ -1,0 +1,45 @@
+// media queries
+
+@mixin device($breakpoint){
+    @if $breakpoint == "extraLarge" {
+        @media (max-width: 1200px){
+            @content;
+        }
+    }
+    @if $breakpoint == "large" {
+        @media (max-width: 992px){
+            @content;
+        }
+    }
+    @if $breakpoint == "medium" {
+        @media (max-width: 768px){
+            @content;
+        }
+    }
+    @if $breakpoint == "small" {
+        @media (max-width: 576px){
+            @content;
+        }
+    }
+
+}
+
+
+@mixin buttonStyle{
+    padding: 10px 30px;
+    display: inline-block;
+    margin-top: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #fff;
+    background-color: blue;
+    border: 2px solid blue;
+    outline: none;
+    transition: all 0.5s ease;
+
+    &:hover {
+      color: blue !important;
+      background-color: #fff;
+    }
+}
+
